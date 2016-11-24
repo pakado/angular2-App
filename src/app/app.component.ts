@@ -4,10 +4,13 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 @Component({
   moduleId: module.id,
   selector: 'app-root',
-  templateUrl: 'app.component.html',
+  template: `
+    <h1>{{title}}</h1>
+    <app-product-list></app-product-list>
+  `,
   styleUrls: ['app.component.css'],
   directives:[ProductListComponent]
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'app works!!';
 }
