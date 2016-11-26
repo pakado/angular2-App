@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductListComponent } from './products/product-list/product-list.component'
+import { ProductListComponent } from './products/product-list/product-list.component';
 
 @Component({
   moduleId: module.id,

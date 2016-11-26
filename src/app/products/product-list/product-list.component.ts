@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { IProduct } from '../products';
+import { ProductFilterPipe } from '../product-filter.pipe';
 @Component({
   moduleId: module.id,
   selector: 'app-product-list',
   templateUrl: 'product-list.component.html',
-  styleUrls: ['product-list.component.css']
+  styleUrls: ['product-list.component.css'],
+  pipes: [ProductFilterPipe ]
 })
-export class ProductListComponent{
+export class ProductListComponent implements OnInit{
   pageTitle: String = "Product List!";
   imageWidth: number = 50;
   imageMargin: number = 20;
   showImage: boolean = false;
   listFilter: string = 'cart';
-  products: any[] = [
+  products: IProduct[] = [
     {
       "productId": 1,
       "productName": "Leaf Rake",
@@ -67,5 +69,9 @@ export class ProductListComponent{
 
   toggleImage(): void {
     this.showImage = !this.showImage;
+  }
+
+  ngOnInit():void{
+    console.log("ngOoInit() function");
   }
 }
