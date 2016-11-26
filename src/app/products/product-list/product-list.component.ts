@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { IProduct } from '../products';
 import { ProductFilterPipe } from '../product-filter.pipe';
+import { StarComponent } from '../../shared/star/star.component';
+
 @Component({
   moduleId: module.id,
   selector: 'app-product-list',
   templateUrl: 'product-list.component.html',
   styleUrls: ['product-list.component.css'],
-  pipes: [ProductFilterPipe ]
+  pipes: [ProductFilterPipe ],
+  directives: [StarComponent]
 })
 export class ProductListComponent implements OnInit{
   pageTitle: String = "Product List!";
@@ -15,6 +18,16 @@ export class ProductListComponent implements OnInit{
   showImage: boolean = false;
   listFilter: string = 'cart';
   products: IProduct[] = [
+    {
+      "productId": 0,
+      "productName": "carttest",
+      "productCode": "GDN-0011",
+      "releaseDate": "March 19, 2016",
+      "description": " Test48-inch wooden handle.",
+      "price": 89.95,
+      "starRating": 1,
+      "imageUrl": "http://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
+    },
     {
       "productId": 1,
       "productName": "Leaf Rake",

@@ -12,5 +12,5 @@ import { ProductListComponent } from './products/product-list/product-list.compo
   directives:[ProductListComponent]
 })
 export class AppComponent {
-  title = 'app works!!';
+  title = 'app works!';
 }
