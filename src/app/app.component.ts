@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ProductListComponent } from './products/product-list/product-list.component';
+import { ProductService } from './products/product.service';
 
 @Component({
   moduleId: module.id,
@@ -9,7 +10,8 @@ import { ProductListComponent } from './products/product-list/product-list.compo
     <app-product-list></app-product-list>
   `,
   styleUrls: ['app.component.css'],
-  directives:[ProductListComponent]
+  directives: [ProductListComponent],
+  providers: [ProductService]
 })
 export class AppComponent {
   title = 'app works!';
